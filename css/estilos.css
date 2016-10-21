@@ -1,0 +1,64 @@
+* {
+    font-size:14px;
+    font-weight: bold;
+    }
+input, textarea, keygen, select, button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif!important;
+    font-size:14px;
+    font-weight: bold;
+}
+.calculadora {
+    width: 190px;
+    margin: auto;
+    background-color: #aaaaaa;
+    border-radius: 5px;
+}
+
+.calculadora [type=button] {
+    padding: 10px;
+    margin: 5px;
+    width: 35px;
+    size: 13px;
+    border-radius: 3px;
+    border: none;
+    background-color: #eeeeee;
+    outline: 0px;
+}
+
+.calculadora [type=button]:hover {
+    cursor: pointer;
+    background-color: #444444;
+    color: #ffffff;
+}
+
+#c {
+    width: 170px;
+    background-color: #E51D1D;
+}
+#c:hover {
+    width: 170px;
+    background-color: #444444;
+}
+
+#pantalla {
+    margin-top: 5px;
+    padding: 5px;
+    border: none;
+    background-color: #ffffff;
+    text-align: right;
+    overflow: hidden;
+    resize: vertical;
+    width: 170px;
+    border-radius: 4px;
+}
+
+#teclado {
+     margin: auto;
+     padding: 5px;
+}
+
+#visor {
+    margin:auto;
+    padding: 5px 5px 0 5px;
+    text-align: center;
+}
