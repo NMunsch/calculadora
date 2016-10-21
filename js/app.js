@@ -1,4 +1,5 @@
 let coma = 0;
+let error = 0;
 function refrescar() {
     document.getElementById("pantalla").value = "";
     localStorage.clear();
@@ -6,9 +7,14 @@ function refrescar() {
     b = 0;
     c = 0;
     coma = 0;
+    error = 0;
 }
 
 function mostrar(a) {
+    if (error == 1) {
+        document.getElementById("pantalla").value = "";
+        error = 0;
+    }
     document.getElementById("pantalla").value = document.getElementById("pantalla").value + a;
     if (isNaN(a) == true) {
         coma = coma + 1;
@@ -16,6 +22,7 @@ function mostrar(a) {
             document.getElementById("pantalla").value = "";
             document.getElementById("pantalla").value = document.getElementById("pantalla").value + "syntax error";
             coma = 0;
+            error = 1;
         }
     }
 }
@@ -32,16 +39,18 @@ function operadores(b) {
 }
 
 function operar() {
-    coma = 0;
     numero2 = document.getElementById("pantalla").value;
     localStorage.setItem("numero2", "pantalla");
     document.getElementById("pantalla").value = "";
     let a = numero1;
     let b = numero2;
     let c = operador;
-    localStorage.getItem("operador");
+    if (a == '') {
+        a = 0;
+    }
+    if (b == '') {
+        b = 0;
+    }
     let resultado = eval(parseFloat(a) + c + parseFloat(b));
-    document.getElementById("pantalla").value = "";
     document.getElementById("pantalla").value = document.getElementById("pantalla").value + resultado;
-    localStorage.clear();
 }
