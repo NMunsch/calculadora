@@ -1,4 +1,4 @@
-var coma = 0;
+let coma = 0;
 function refrescar() {
     document.getElementById("pantalla").value = "";
     localStorage.clear();
@@ -36,11 +36,11 @@ function operar() {
     numero2 = document.getElementById("pantalla").value;
     localStorage.setItem("numero2", "pantalla");
     document.getElementById("pantalla").value = "";
-    var a = numero1;
-    var b = numero2;
-    var c = operador;
+    let a = numero1;
+    let b = numero2;
+    let c = operador;
     localStorage.getItem("operador");
-    var resultado = eval(parseFloat(a) + c + parseFloat(b));
+    let resultado = eval(parseFloat(a) + c + parseFloat(b));
     document.getElementById("pantalla").value = "";
     document.getElementById("pantalla").value = document.getElementById("pantalla").value + resultado;
     localStorage.clear();
