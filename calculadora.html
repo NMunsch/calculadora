@@ -12,18 +12,18 @@
 <body>
     <div class="calculadora">
         <div id="visor">
-            <textarea rows="1" id="pantalla" value="" readonly></textarea>
+            <input type="text" rows="1" id="pantalla" value="" readonly></input>
         </div>
         <div id="teclado">
-            <div><input type="button" value="7" id="7" onclick="javascript:mostrar('7');"><input type="button" value="8" id="8" onclick="javascript:mostrar('8');"><input type="button" value="9" id="9" onclick="javascript:mostrar('9');"><input type="button"
-                    onclick="javascript:operadores('*');" value="*" id="*"></div>
-            <div><input type="button" value="4" id="4" onclick="javascript:mostrar('4');"><input type="button" value="5" id="5" onclick="javascript:mostrar('5');"><input type="button" value="6" id="6" onclick="javascript:mostrar('6');"><input type="button"
-                    onclick="javascript:operadores('-');" value="-" id="-"></div>
-            <div><input type="button" value="1" id="1" onclick="javascript:mostrar('1');"><input type="button" value="2" id="2" onclick="javascript:mostrar('2');"><input type="button" value="3" id="3" onclick="javascript:mostrar('3');"><input type="button"
-                    onclick="javascript:operadores('+');" value="+" id="+"></div>
-            <div><input type="button" value="0" id="0" onclick="javascript:mostrar('0');"><input type="button" value="." id="." onclick="javascript:mostrar('.');"><input type="button" value="=" id="=" onclick="javascript:operar();"><input type="button" value="/"
-                    id="/" onclick="javascript:operadores('/');"></div>
-            <div><input type="button" value="c" id="c" onclick="javascript:refrescar();"></div>                    
+            <div><input type="button" value="7" id="7" onclick="javascript:mostrar('7');"></input><input type="button" value="8" id="8" onclick="javascript:mostrar('8');"></input><input type="button" value="9" id="9" onclick="javascript:mostrar('9');"></input><input type="button"
+                    onclick="javascript:operadores('*');" value="*" id="*"></input></div>
+            <div><input type="button" value="4" id="4" onclick="javascript:mostrar('4');"></input><input type="button" value="5" id="5" onclick="javascript:mostrar('5');"></input><input type="button" value="6" id="6" onclick="javascript:mostrar('6');"></input><input type="button"
+                    onclick="javascript:operadores('-');" value="-" id="-"></input></div>
+            <div><input type="button" value="1" id="1" onclick="javascript:mostrar('1');"></input><input type="button" value="2" id="2" onclick="javascript:mostrar('2');"></input><input type="button" value="3" id="3" onclick="javascript:mostrar('3');"></input><input type="button"
+                    onclick="javascript:operadores('+');" value="+" id="+"></input></div>
+            <div><input type="button" value="0" id="0" onclick="javascript:mostrar('0');"></input><input type="button" value="." id="." onclick="javascript:mostrar('.');"></input><input type="button" value="=" id="=" onclick="javascript:operar();"></input><input type="button" value="/"
+                    id="/" onclick="javascript:operadores('/');"></input></div>
+            <div><input type="button" value="c" id="c" onclick="javascript:refrescar();"></input></div>                    
         </div>
     </div>
 </body>
