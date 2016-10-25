@@ -1,37 +1,26 @@
 let coma = 0;
-let error = 0;
 let resultado = '';
 let ope = 0;
+let primerNumero = '';
+let segundoNumero = '';
 
 function refrescar() {
     document.getElementById("pantalla").value = "";
-    primerNumero = 0;
-    segundoNumero = 0;
+    primerNumero = '';
+    segundoNumero = '';
     operacion = 0;
     coma = 0;
-    error = 0;
     resultado = '';
     ope = 0;
 }
 
 function mostrar(primerNumero) {
-    if (error == 1) {
-        document.getElementById("pantalla").value = "";
-        error = 0;
-    }
     document.getElementById("pantalla").value = document.getElementById("pantalla").value + primerNumero;
     if (isNaN(primerNumero) == true) {
         coma = coma + 1;
         if (coma > 1) {
             document.getElementById("pantalla").value = "";
             document.getElementById("pantalla").value = document.getElementById("pantalla").value + "syntax error";
-            primerNumero = 0;
-            segundoNumero = 0;
-            operacion = 0;
-            coma = 0;
-            error = 1;
-            resultado = '';
-            ope = 0;
         }
     }
 }
@@ -41,13 +30,6 @@ function operadores(segundoNumero) {
     if (ope > 1) {
         document.getElementById("pantalla").value = "";
         document.getElementById("pantalla").value = document.getElementById("pantalla").value + "syntax error";
-        primerNumero = "";
-        segundoNumero = "";
-        operacion = "";
-        coma = 0;
-        error = 0;
-        resultado = '';
-        ope = 0;
     }
     else {
         numero1 = document.getElementById("pantalla").value;
