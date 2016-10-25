@@ -15,7 +15,6 @@ function refrescar() {
 }
 
 function mostrar(primerNumero) {
-    
     if (error == 1) {
         document.getElementById("pantalla").value = "";
         error = 0;
@@ -30,7 +29,7 @@ function mostrar(primerNumero) {
             segundoNumero = 0;
             operacion = 0;
             coma = 0;
-            error = 0;
+            error = 1;
             resultado = '';
             ope = 0;
         }
@@ -42,16 +41,15 @@ function operadores(segundoNumero) {
     if (ope > 1) {
         document.getElementById("pantalla").value = "";
         document.getElementById("pantalla").value = document.getElementById("pantalla").value + "syntax error";
-        primerNumero = 0;
-        segundoNumero = 0;
-        operacion = 0;
+        primerNumero = "";
+        segundoNumero = "";
+        operacion = "";
         coma = 0;
         error = 0;
         resultado = '';
         ope = 0;
     }
     else {
-        coma = 0;
         numero1 = document.getElementById("pantalla").value;
         document.getElementById("pantalla").value = "";
         document.getElementById("pantalla").value = document.getElementById("pantalla").value + segundoNumero;
